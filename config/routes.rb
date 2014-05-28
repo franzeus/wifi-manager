@@ -1,5 +1,6 @@
 Wfmanager::Application.routes.draw do
   get "wifi_manager/home"
+  get "wifi_manager/about"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
