@@ -3,4 +3,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Wfmanager::Application.load_tasks
+Prac1::Application.load_tasks

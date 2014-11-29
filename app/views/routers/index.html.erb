@@ -1,0 +1,25 @@
+<h1>Router List</h1>
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>Location</th>
+			<th>IP Address</th>
+			<th>Action</th>
+		</tr>
+	</thead>
+	<tbody>
+	<% @routers.each do |router| %>
+		<tr>
+			<td><%= router.location %></td>
+			<td><%= router.ip %></td>
+			<td>
+
+				<%= link_to "Manage", {controller: "router_managers", action: "show", id: router.id}, class: "btn btn-action" %>
+				<%= link_to "Delete", router, :method => :delete, class: "btn btn-small btn-warning" %>
+			</td>
+		</tr>
+	<% end %>
+	</tbody>
+</table>
+
+<%= link_to "Add New Router", new_router_path %>

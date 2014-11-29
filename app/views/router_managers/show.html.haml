@@ -1,0 +1,6 @@
+%h1 
+  Manage 
+%h3= @ssid
+= button_to "DNS Lease", action: "get_dns_lease", class: "btn btn-primary"
+= button_to "Syslog", action: "get_syslog", class: "btn btn-primary"
+= button_to "Message", action: "send_data", class: "btn btn-warning"

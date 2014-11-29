@@ -1,6 +1,22 @@
-Wfmanager::Application.routes.draw do
-  get "wifi_manager/home"
-  get "wifi_manager/about"
+Prac1::Application.routes.draw do
+  devise_for :users
+  #get "router_managers" => "router_managers#send_data", :as => "router_managers"
+  root 'live_sessions#index'
+  #root 'home#index'
+  resources :dashboard
+  resources :buildings
+    resources :routers
+  resources :routers
+  resources :router_managers
+  # match '/dashboard', to: 'dashboard#index', via: 'get'
+  match '/about', to: 'static_pages#about', via: 'get'
+  match '/manage', to: 'buildings#manage', via: 'get'
+  post 'routers/turn_off'
+  post 'routers/reboot'
+  post 'routers/change_ssid'
+  post 'router_managers/get_dns_lease'
+  post 'router_managers/get_syslog'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

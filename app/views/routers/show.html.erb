@@ -1,0 +1,11 @@
+<h1>Router Management</h1>
+<h3> <%= @router.location %> </h3>
+<h4> Basic Info </h4>
+<%= start_connection('192.168.1.1', 'root', 'admin') %>
+<%= button_to "Turn off Radio", action: "turn_off" %>	
+<%= form_tag(controller: "routers", action: "change_ssid") do %>
+        <%= label_tag(:ssid, "Change SSID: ") %>	
+	<%= text_field_tag(:ssid) %>
+	<%= submit_tag("Change") %>
+<% end %>
+<%= button_to "Reboot", action: "reboot" %>	

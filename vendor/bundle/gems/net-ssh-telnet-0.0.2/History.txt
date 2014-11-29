@@ -1,0 +1,16 @@
+=== 0.0.2 / 2009-03-15
+
+* 4 bugfixes from Brian Candler
+  * Bug in original Net::Telnet EOL translation 
+    (http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-core/16599) 
+    duplicate the fix.
+  * Remove rubygems require.
+  * Handle EOF more gracefully.
+  * Allow FailEOF to propagate through cmd() to waitfor().
+
+=== 0.0.1 / 2008-06-06
+
+* 1 major enhancement
+  * Birthday!
+  * Initial revision by Brian Candler based on Net::Telnet.
+  * Test release.

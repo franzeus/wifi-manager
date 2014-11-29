@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Wfmanager::Application.config.secret_key_base = '42524d2c2317cf2a4faab2c735f21d862e1276352dd3f765c0635194abe85086ee88533e20cf3b2bdaf1a992da3b7f0990e0ab2c4f6178c9348be20520a46e8f'
+Prac1::Application.config.secret_key_base = 'c2cc1d99d5b799745bf9d41d26a26786aa4f92b0ac7f79d63dceed7b35874f461d1d83a03099266dc2a177c4fe6f041a6d5675dc69d60bc7f587491abd03d234'

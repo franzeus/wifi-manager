@@ -1,0 +1,19 @@
+<header class="navbar navbar-default navbar-inverse">
+        <div class="navbar-inner">
+                <div class="container">
+                  <%= link_to "WiFi Manager", root_path, id: "logo" %>
+                  <nav>
+                        <ul class="nav pull-right">
+                                <% if user_signed_in? %>
+                                        <li><%= link_to "Dashboard", dashboard_index_path %></li>
+                                        <li><%= link_to "Sign Out", destroy_user_session_path, :method => :delete %></li>
+                                <% else %>
+                                        <li><%= link_to "Sign In", new_user_session_path %></li>
+
+                                <% end %>
+                        </ul>
+                 </nav>
+               </div>
+       </div>
+       <div class="navbar
+</header>

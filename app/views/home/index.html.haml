@@ -1,0 +1,9 @@
+.center.hero-unit
+        %h1 Welcome to WiFi Manager. 
+        %h3 Manage your routers remotely.
+        - if user_signed_in?
+                %p
+                        You are signed in as #{current_user.email}
+        - else
+                =link_to "Sign in", new_user_session_path, class: "btn btn-large btn-primary"
+

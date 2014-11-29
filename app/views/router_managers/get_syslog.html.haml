@@ -1,0 +1,11 @@
+%h1 Syslogs
+%table.table.table-striped.table-bordered.table-hover
+  %thead
+    %tr
+      %th Device 
+  %tbody
+    - @syslog_per_line.each do |d|
+      %tr
+        %td= d
+
+  
